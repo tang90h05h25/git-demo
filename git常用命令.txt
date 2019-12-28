@@ -24,12 +24,14 @@ ssh-keygen -t rsa –C “3594@example.com”注意 保存文件名字的时候�
 git remote add origin https://github.com/t7/testgit.git
 
 git pull origin master --allow-unrelated-histories
-   后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并
+   后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并 
 
 git pull --rebase origin master 合并线上和本地仓库
 
 git push -u origin master 把当前分支master推送到远程 第一次加 -u 把本地和远程master分支关联起来 
 git push origin master
+
+git push --set-upstream origin master //这是因为本地的分支没有和远程分支建立联系，需要执行以下代码就可以正常push了
 
 git checkout -b dev 创建并切换分支    相当于  git branch dev    +   git checkout dev
 git branch 查看分支   
