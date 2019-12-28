@@ -1,5 +1,6 @@
-# git-demo
-git 操作
+#### git-demo
+
+git 指令操作
 
 #### git说明
 1.  xxxx
