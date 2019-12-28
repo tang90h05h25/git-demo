@@ -1,0 +1,74 @@
+
+mkdir name 创建文件夹，
+type null> 文件名.文件类型
+touch name/{base.css,reset.css}  创建文件
+pwd 命令是用于显示当前的目录
+
+
+git init 把这个目录变成git可以管理的仓库
+git add name 添加到暂存区里面去 git add .
+git commit 告诉Git，把文件提交到仓库  git commit -m '提示'
+git status 查看状态
+cat name 查看内容
+git diff name 查看git 修改内容
+git log 显示从最近到最远的显示日志  git log --pretty=oneline  简洁版
+git reset --hard HEAD^ 回退上一个版本 * git reset --hard HEAD^^ 上上个 git reset --hard HEAD~100
+git reflog 获取版本号 * git reset --hard 版本号 回退版本
+git checkout -- name 修改全部撤销 ***(有空格) -- 很重要 没空格变成创建分支
+rm name 删除文件 * git checkout -- name 在版本库中恢复此文件
+
+生成 ssh
+ssh-keygen -t rsa –C “3594@example.com”注意 保存文件名字的时候后面是名字的后缀
+
+关联远程服务
+git remote add origin https://github.com/t7/testgit.git
+
+git pull origin master --allow-unrelated-histories
+   后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并
+
+git pull --rebase origin master 合并线上和本地仓库
+
+git push -u origin master 把当前分支master推送到远程 第一次加 -u 把本地和远程master分支关联起来 
+git push origin master
+
+git checkout -b dev 创建并切换分支    相当于  git branch dev    +   git checkout dev
+git branch 查看分支   
+git branch –d name 删除分支
+
+// 解决冲突
+git merge dev  合并dev到当前分支
+合并dev分支，使用命令 git merge –no-ff -m “注释” dev
+git log --graph --pretty=oneline --abbrev-commit  查看分支详细信息
+
+//bug修改
+git stash 隐藏工作区域 提交
+
+git stash list  查看隐藏的工作区域
+恢复
+1. git stash apply恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除
+2. 另一种方式是使用git stash pop,恢复的同时把stash内容也删除了。
+
+要查看远程库的信息 使用 git remote
+要查看远程库的详细信息 使用 git remote –v
+
+//推送分支
+git push origin master
+
+git checkout –b dev origin/dev  创建远程origin的分支到本地来
+
+更新远程分支列表
+git remote update origin --prune
+
+
+查看所有分支
+git branch -a
+
+删除远程分支Chapater6
+git push origin --delete Chapater6
+
+删除本地分支 Chapater6
+git branch -d  Chapater6
+
+
+// git blame <file> 定位代码修改
+
