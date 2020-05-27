@@ -1,4 +1,5 @@
 
+
 mkdir name 创建文件夹，
 type null> 文件名.文件类型
 touch name/{base.css,reset.css}  创建文件  
@@ -17,8 +18,10 @@ git reflog 获取版本号 * git reset --hard 版本号 回退版本
 git checkout -- name 修改全部撤销 ***(有空格) -- 很重要 没空格变成创建分支
 rm name 删除文件 * git checkout -- name 在版本库中恢复此文件
 
+
 生成 ssh
 ssh-keygen -t rsa –C “3594@example.com”注意 保存文件名字的时候后面是名字的后缀
+
 
 关联远程服务
 git remote add origin https://github.com/t7/testgit.git
