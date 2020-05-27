@@ -1,7 +1,7 @@
 
 mkdir name 创建文件夹，
 type null> 文件名.文件类型
-touch name/{base.css,reset.css}  创建文件
+touch name/{base.css,reset.css}  创建文件  
 pwd 命令是用于显示当前的目录
 
 
