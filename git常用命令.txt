@@ -1,3 +1,5 @@
+git 常用命令
+https://www.cnblogs.com/cxx8181602/p/11125539.html
 
 mkdir name 创建文件夹，
 type null> 文件名.文件类型
